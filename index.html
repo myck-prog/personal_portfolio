@@ -15,7 +15,7 @@
         <nav>
             <!-- Semantic Nav with Image and Links -->
             <figure>
-                <img id="personal-logo" src="./assets/logo.svg" alt="">
+                <img id="personal-logo" src="./assets/logo1.svg" alt="">
             </figure>
             <ul class="nav__link--list">
                 <!-- separate block and modifier BAM css -->
@@ -74,6 +74,42 @@
         <a href="#projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title">Here's abit about me</h3> 
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
+                <p class="modal__para">I'm a <b class="orange">21</b> year old Indonesian software engineer <br>
+                Currently I'm finishing my studies at Simon Fraser University, Canada in Data Science
+            </p>
+            <div class="modal__languages">
+                <figure class="modal__language">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                    alt="Html Logo" class="modal__language--img" />
+                    <span class="language__name">HTML</span>             
+                </figure>
+                    <figure class="modal__language">
+                      <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS Logo"
+                        class="modal__language--img" />
+                        <span class="language__name">CSS</span>
+                    </figure>
+                
+                    <figure class="modal__language">
+                      <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript Logo"
+                        class="modal__language--img" />
+                        <span class="language__name">JavaScript</span>
+                    </figure>
+                
+                    <figure class="modal__language">
+                      <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React Logo"
+                        class="modal__language--img" />
+                        <span class="language__name">React</span>
+                    </figure>
+                  </div>
+            </div>
+                
+            <div class="modal__half modal__contact">Let's chat with me </div>
+        </div>
     </section>
     <section id="projects">
         <div class="container">
@@ -90,7 +126,61 @@
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
-                                    Car Sales Projects
+                                    Social Media Clone
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML,CSS,Javascript, Vue, Vuex
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut pariatur, delectus veniam fugit, nesciunt error cum eaque, quae culpa possimus quia inventore ad. Cumque, eius?
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Project 2 -->
+                    <li class="project">
+                        <!-- always add project wrapper -->
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" class="project__image" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Social Media Clone
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML,CSS,Javascript, Vue, Vuex
+                                </h4>
+                                <p class="project__description--para">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut pariatur, delectus veniam fugit, nesciunt error cum eaque, quae culpa possimus quia inventore ad. Cumque, eius?
+                                </p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Project 3 -->
+                    <li class="project">
+                        <!-- always add project wrapper -->
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" class="project__image" alt="">
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Social Media Clone
                                 </h3>
                                 <h4 class="project__description--sub-title">
                                     HTML,CSS,Javascript, Vue, Vuex
@@ -112,8 +202,55 @@
                 </ul>
             </div>
         </div>
-
     </section>
+    <footer>
+        <div class="container">
+            <!-- Container for top and bottom -->
+          <div class="row footer__row"> 
+            <!-- Row for left and right -->
+            <a href="#" class="footer__anchor">
+              <figure class="footer__logo">
+                <img src="./assets/logo1.svg" class="footer__logo--img" alt="">
+              </figure>
+              <span class="footer__logo--popper">
+                Top
+                <i class="fas fa-arrow-up"></i>
+              </span>
+            </a>
+            <div class="footer__social--list">
+              <a href="https://github.com/myck-prog" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white
+            ">
+                GitHub
+              </a>
+              <a href="https://www.linkedin.com/in/myckland-m-400077193/" target="_blank" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white
+            ">
+                LinkedIn
+              </a>
+              <a href="#" onclick="toggleModal()" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white
+            ">
+                Contact
+              </a>
+              <a href="#" target="_blank" class="
+              footer__social--link
+              link__hover-effect
+              link__hover-effect--white
+            ">
+                Resume
+              </a>
+            </div>
+            <div class="footer__copyright">Copyright &copy; 2022 Myckland Matthew</div>
+          </div>
+        </div>
+      </footer>
 </body>
 
 </html>
