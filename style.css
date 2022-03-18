@@ -639,7 +639,6 @@ shapes on thirds column width:80vh
     top: 80vh;
     left: 90vw;
   }
-
   /* small phone, tablet, large smart phones */
 @media (max-width:768px){
     .title{
