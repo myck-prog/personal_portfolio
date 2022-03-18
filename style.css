@@ -26,6 +26,7 @@ button{
 }
 section{
     background-color: rgb(245, 245, 245);
+    transition: all 300ms ease;
 }
 
 input, textarea{
@@ -59,11 +60,7 @@ input:hover, textarea:hover
 input:focus, textarea:focus{
     border-color: #f06449;
 }
-.modal--open{
-    z-index: 60;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
-    visibility: visible;
-}
+
 .title{
     font-size: 76px;
     margin-bottom:12px;
@@ -98,7 +95,24 @@ input:focus, textarea:focus{
     width: 100%;
 
 }
-  
+
+/* Transition when opening and closing the modal */
+nav,
+.scroll,
+.header{
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 800ms ;
+}
+/* added the delay parts using the delay 800ms to zoom in an dzoom out  */
+.modal--open nav,
+.modal--open .scroll,
+.modal--open .header{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms;
+}
+
 .container{
     padding: 50px 0;
     width: 100%;
@@ -116,6 +130,38 @@ input:focus, textarea:focus{
 }
 .click:active{
     transform: scale(0.8);
+}
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-moon,
+.dark-theme .header__para
+{
+    color: white;
+}
+.dark-theme section{
+    background-color: #242424;
+}
+.dark-theme #personal-logo {
+    filter: invert(1)
+}
+.dark-theme .scroll__icon{
+    border-color: white;
+}
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--black:after
+{
+    background-color: white;
+}
+.dark-theme .link__hover-effect--white:after
+{
+    background-color: black;
+}
+.dark-theme .mail__btn{
+    background-color: white;
+    color: #242424;
+
 }
 
 /* LANDING PAGE */
@@ -137,6 +183,7 @@ input:focus, textarea:focus{
     font-size: 24px;
     line-height: 2;
     max-width: 450px;
+  
 }
 .social__list{
     margin-top: 16px;
@@ -225,7 +272,7 @@ nav{
     width: 70px;
     height: 70px;
     
-    /* filter: invert(1); */
+    /*filter: invert(1); */
 }
 .nav__link{
     margin: 0 12px;
@@ -257,7 +304,20 @@ MODAL
     overflow: hidden;
     display: flex;
     visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 0.5s ease-in;
 
+}
+
+.modal--open .modal{
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+}
+.modal--open .modal__about,
+.modal--open .modal__contact
+{
+    transform: translateX(0%);
 }
 .modal__half{
     width: 50%;
@@ -266,11 +326,12 @@ MODAL
     flex-direction: column;
     justify-content: center;
     position: relative;
+    transition: all 300ms ease-in;
 }
 
 .modal__about {
     background-color: rgb(245,245,245);
-
+    transform: translateX(-110%);
 
     
 }
@@ -311,7 +372,7 @@ MODAL
 .modal__contact{
     background-color: #242424;
     color: white;
-    
+    transform: translateX(110%);
 }
 .modal__title{
     font-size: 26px;
@@ -355,7 +416,8 @@ MODAL
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    /* we don't want to show them at all */
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: -1;
@@ -376,6 +438,7 @@ MODAL
 }
 .modal__overlay--visible{
 z-index: 1;
+display: flex;
 }
 .fa-spinner{
     animation:spinner 750ms infinite linear;
@@ -390,7 +453,7 @@ z-index: 1;
     }
 }
 
-.modal_exit{
+.modal__exit{
     position: absolute;
     top: 30px;
     right: 40px;
@@ -523,6 +586,63 @@ footer{
     transform: translateX(60px);
     opacity: 1;
   } 
+/*  
+SHAPES
+shapes on first row height == 35 vh
+shapes on second row height == 70 vh
+shapes on third row height == 95 vh
 
+shapes on first column width:5vh
+shapes on second column width:50vh
+shapes on thirds column width:80vh
+*/
+.shape{
+    /* when we scroll it stayes in the area */
+    position: fixed;
+}
+.shape--0 {
+    top: 15vh;
+    left: 5vh;
+}
+
+.shape--1 {
+    top: 15vh;
+    left: 50vh;
+}
+
+.shape--2 {
+    top: 15vh;
+    left: 80vh;
+}
+
+.shape--3 {
+    top: 50vh;
+    left: 5vh;
+}
+
+.shape--4 {
+    top: 50vh;
+    left: 50vh;
+}
+
+.shape--5 {
+    top: 50vh;
+    left: 80vh;
+}
+
+.shape--6 {
+    top: 80vh;
+    left: 5vh;
+}
+
+.shape--7 {
+    top: 80vh;
+    left: 50vh;
+}
+
+.shape--8 {
+    top: 80vh;
+    left: 80vh;
+}
 
   
