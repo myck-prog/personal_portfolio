@@ -59,6 +59,11 @@ input:hover, textarea:hover
 input:focus, textarea:focus{
     border-color: #f06449;
 }
+.modal--open{
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+}
 .title{
     font-size: 76px;
     margin-bottom:12px;
@@ -106,6 +111,7 @@ input:focus, textarea:focus{
     padding: 0 12px;
 }
 .click:hover{
+    cursor:pointer;
     transform: scale(1.1);
 }
 .click:active{
@@ -247,10 +253,10 @@ MODAL
     width: 90%;
     max-width: 1100px;
     height: 700px;
-    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
     border-radius: 2px;
     overflow: hidden;
     display: flex;
+    visibility: hidden;
 
 }
 .modal__half{
@@ -352,6 +358,7 @@ MODAL
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 .modal__overlay--loading{
     background-color: #242424;
@@ -367,6 +374,9 @@ MODAL
     text-align: center;
     padding: 20px;
 }
+.modal__overlay--visible{
+z-index: 1;
+}
 .fa-spinner{
     animation:spinner 750ms infinite linear;
 }
@@ -378,6 +388,16 @@ MODAL
     100%{
         transform: rotate(360deg);
     }
+}
+
+.modal_exit{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 36px;
+    z-index: 100;
+
 }
 /* PROJECTS */
 
